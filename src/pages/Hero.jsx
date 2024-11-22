@@ -1,3 +1,5 @@
+import { Github, Youtube } from "lucide-react";
+
 import { useRef, useState, useEffect } from "react";
 
 const Hero = () => {
@@ -45,29 +47,39 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden">
       {/* Content Section */}
-      <div className="absolute inset-0 z-20 flex flex-col justify-center px-6 lg:px-12">
+      <div
+        className={`absolute inset-0 z-20 md:z-100  flex flex-col justify-center px-6 lg:px-12`}
+      >
         <div className="max-w-2xl space-y-6">
-          <div className="space-y-2">
+          <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
-              Construyendo
+              ¡Subí de nivel
             </h1>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-              experiencias digitales
+              y convertite en el Messi del código!
             </h2>
           </div>
 
           <p className="text-xl md:text-2xl text-gray-300">
-            Desarrollador full-stack especializado en la creación de
-            aplicaciones web innovadoras y fáciles de usar.
+            Tutoriales de video tan zarpados y de alta calidad que hasta tu
+            abuela querría aprender a programar, hechos a medida para
+            desarrolladores y diseñadores web con onda.
           </p>
 
-          <div className="flex space-x-4">
-            <button className="px-8 py-3 bg-gradient-to-r from-pink-600 via-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95">
+          <div className={` flex space-x-4`}>
+            <button
+              className={` 
+              } px-8 py-3 bg-gradient-to-r from-pink-600 via-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95`}
+            >
               Iniciar Proyecto
             </button>
             <button className="px-6 py-3 border-2 border-white/30 text-white rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105 active:scale-95">
               Ver Showreel
             </button>
+          </div>
+          <div className="flex space-x-4 gap-2">
+            <Youtube color="white" />
+            <Github color="white" />
           </div>
         </div>
       </div>
@@ -75,7 +87,9 @@ const Hero = () => {
       {/* Play Button */}
       <button
         onClick={togglePlay}
-        className="absolute bottom-8 right-8 z-30 bg-white/20 backdrop-blur-sm rounded-full p-4 hover:bg-white/30 transition-all duration-300"
+        className={`hidden md:block absolute bottom-8 right-8 ${
+          isPlaying ? "z-50" : "z-30"
+        } bg-white/20 backdrop-blur-sm rounded-full p-4 hover:bg-white/30 transition-all duration-300`}
         aria-label={isPlaying ? "Pausar video" : "Reproducir video"}
       >
         {isPlaying ? (
@@ -107,7 +121,9 @@ const Hero = () => {
       {/* Video Background */}
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover opacity-50"
+        className={`${
+          isPlaying ? "z-30" : "z-0"
+        } absolute inset-0 w-full h-full object-cover opacity-50`}
         src="/assets/video/DOT.mp4"
         controls={false}
         disablePictureInPicture

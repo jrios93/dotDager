@@ -51,19 +51,17 @@ const Nav = () => {
             </button>
             {/* Desktop Navigation */}
             <ul className="hidden md:flex space-x-6 text-md">
-              {["Inicio", "Proyecto", "Habilidades", "Testimonios"].map(
-                (item) => (
-                  <li key={item}>
-                    <a
-                      href={`#${item.toLowerCase()}`}
-                      className="relative group text-white font-semibold"
-                    >
-                      {item}
-                      <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300 transform -translate-x-1/2 group-hover:w-full"></span>
-                    </a>
-                  </li>
-                )
-              )}
+              {["Inicio", "Lenguajes", "Testimonios"].map((item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item.toLowerCase()}`}
+                    className="relative group text-white font-semibold"
+                  >
+                    {item}
+                    <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-300 transform -translate-x-1/2 group-hover:w-full"></span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </li>
         </ul>
@@ -78,15 +76,13 @@ const Nav = () => {
           }`}
         >
           <ul className="flex flex-col gap-10 items-center">
-            {["Inicio", "Proyecto", "Habilidades", "Testimonios"].map(
-              (item) => (
-                <li key={item} className="text-4xl font-bold">
-                  <a onClick={toggleMenu} href={`#${item.toLowerCase()}`}>
-                    {item}
-                  </a>
-                </li>
-              )
-            )}
+            {["Inicio", "Lenguajes", "Testimonios"].map((item) => (
+              <li key={item} className="text-4xl font-bold">
+                <a onClick={toggleMenu} href={`#${item.toLowerCase()}`}>
+                  {item}
+                </a>
+              </li>
+            ))}
           </ul>
           <button
             onClick={toggleMenu}
