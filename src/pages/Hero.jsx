@@ -5,8 +5,8 @@ const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Establece el tiempo de inicio y fin en segundos
-  const startTime = 42; // Empieza a los 60 segundos (1 minuto)
-  const endTime = 150; // Termina a los 120 segundos (2 minutos)
+  const startTime = 56; // Empieza a los 60 segundos (1 minuto)
+  const endTime = 160; // Termina a los 120 segundos (2 minutos)
   const togglePlay = () => {
     if (videoRef.current) {
       if (isPlaying) {
