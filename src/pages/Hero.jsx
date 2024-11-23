@@ -78,12 +78,14 @@ const Hero = () => {
             <button className="px-8 py-3 bg-gradient-to-r from-pink-600 via-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 hover:brightness-110">
               Iniciar Proyecto
             </button>
-            <button
-              onClick={togglePlay}
-              className="px-6 py-3 border-2 border-white/30 text-white rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105 active:scale-95"
+            <a
+              href="https://dot-dager.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border-2 text-center border-white/30 text-white rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105 active:scale-95"
             >
-              Ver Showreel
-            </button>
+              Revisa este proyecto mejorado
+            </a>
           </div>
 
           {/* Social Icons con animación */}
