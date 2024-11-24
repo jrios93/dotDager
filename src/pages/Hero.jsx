@@ -153,7 +153,6 @@ const Hero = () => {
           controls={false}
           disablePictureInPicture
           playsInline
-          muted
           preload="auto"
         />
       </div>
